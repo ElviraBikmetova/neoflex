@@ -1,0 +1,59 @@
+@import '../../styles/variables.scss';
+
+.footer {
+    height: 150px;
+    padding: 30px;
+    background-color: $colorWhiteDefault;
+    border-radius: 30px 30px 0px 0px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $colorBlackDefault;
+    &__nav {
+        height: 100%;
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: space-between;
+            align-items: stretch;
+            height: 100%;
+        }
+    }
+    &__lang {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        align-items: stretch;
+        gap: 15px;
+    }
+    &__langChoiсe {
+        display: flex;
+        align-items: center  ;
+        gap: 15px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        & > div:nth-child(3) {
+            font-weight: 700;
+            color: $colorOrange;
+        }
+    }
+    &__iconLang {
+        font-size: 17px;
+        color: $colorGrayDefault;
+    }
+    &__socials {
+        display: flex;
+        gap: 18px;
+    }
+    &__icon {
+        font-size: 30px;
+    }
+}

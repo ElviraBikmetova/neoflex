@@ -1,0 +1,69 @@
+@import 'iconsFontVariables';
+
+@font-face {
+  font-family: '#{$iconsFontFamily}';
+  src:
+    url('#{$iconsFontPath}/#{$iconsFontFamily}.woff?2tj762') format('woff'),
+    url('#{$iconsFontPath}/#{$iconsFontFamily}.ttf?2tj762') format('truetype'),
+    url('#{$iconsFontPath}/#{$iconsFontFamily}.svg?2tj762##{$iconsFontFamily}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon"]::before, [class*=" icon"]::before,
+[class^="icon"]::after, [class*=" icon"]::after {
+  font-family: '#{$iconsFontFamily}' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart {
+  &:before {
+    content: $iconCart;
+    display: flex;
+    align-items: center;
+  }
+}
+.icon-delete {
+  &:before {
+    content: $iconDelete;
+  }
+}
+.icon-lang {
+  &:before {
+    content: $iconLang;
+  }
+}
+.icon-like {
+  &:before {
+    content: $iconLike;
+    display: flex;
+    align-items: center;
+  }
+}
+.icon-star {
+  &:before {
+    content: $iconStar;
+  }
+}
+.icon-telegram {
+  &:before {
+    content: $iconTelegram;
+  }
+}
+.icon-vkontakte {
+  &:before {
+    content: $iconVkontakte;
+  }
+}
+.icon-whatsapp {
+  &:before {
+    content: $iconWhatsapp;
+  }
+}

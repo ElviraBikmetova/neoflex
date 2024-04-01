@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    &__right {
+        display: flex;
+        align-items: center;
+        column-gap: 45px;
+    }
+    &__iconLike {
+        font-size: 20px;
+        color: $colorGrayDefault;
+    }
+    &__iconCart {
+        font-size: 23px;
+        color: $colorGrayDefault;
+    }
+}
