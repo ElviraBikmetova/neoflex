@@ -1,9 +1,15 @@
 export interface IProductCard {
+    id: string
     img: string
     title: string
     price: number
     oldPrice?: number
     rate: number
+    count?: number
+}
+
+export interface IProductCardinCart extends IProductCard {
+    count: number
 }
 
 export interface IProductsItem {

@@ -14,7 +14,7 @@ const ProductsSection: FC<ProductsSectionProps> = ({ products }) => {
         <div className={s.productsSection}>
             <div className={s.productsSection__title}>{products.title}</div>
             <div className={s.productsSection__products}>
-                {products.items.map(product => <ProductCard key={uuidv4()} product={product} destination={ECard.ForHome} />)}
+                {products.items.map(product => <ProductCard key={product.id} product={product} destination={ECard.ForHome} />)}
             </div>
         </div>
     )

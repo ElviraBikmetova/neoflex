@@ -2,18 +2,28 @@ import clsx from "clsx"
 import s from "./style.module.scss"
 import { useNavigate } from "react-router-dom"
 import { ERoutes } from "../../enums/routes"
+import { useAppSelector } from "../../hooks/redux"
+import { products } from "../../store/cartSlice"
 
 const Header = () => {
+    const productsInCart = useAppSelector(products)
     const navigate = useNavigate()
+
     return (
         <header className={s.header}>
             <button className={'logo'} onClick={() => navigate(ERoutes.Root)}>QPICK</button>
             <div className={s.header__right}>
                 <div className={clsx('icon-like', s.header__iconLike)} />
-                <button
+                <div>
+                    <button
                     className={clsx('icon-cart', s.header__iconCart)}
-                    onClick={() => navigate(ERoutes.Cart)}
-                />
+                    onClick={() => navigate(ERoutes.Cart)}>
+                        {productsInCart.length > 0 &&
+                        <div className={s.header__counter}>
+                            {productsInCart.reduce((acc, curr) => acc + (curr.count || 0), 0)}
+                        </div>}
+                    </button>
+                </div>
             </div>
         </header>
     )

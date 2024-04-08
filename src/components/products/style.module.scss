@@ -134,11 +134,14 @@
         &__minus, &__plus {
             display: block;
             position: relative;
-            // z-index: 1;
             width: 30px;
             height: 30px;
             border-radius: 50%;
             background-color: $colorOrange;
+            &[disabled] {
+                background-color: $colorGrayBg;
+                cursor: not-allowed;
+            }
             &::before {
                 content: '';
                 background-color: $colorWhiteDefault;
