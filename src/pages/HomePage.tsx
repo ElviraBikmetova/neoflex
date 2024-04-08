@@ -1,5 +1,5 @@
 import ProductsSection from "../components/products/ProductsSection"
-import { products } from "../mock/products"
+import { products } from "../data/mock/products"
 
 
 const HomePage = () => {

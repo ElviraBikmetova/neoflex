@@ -1,0 +1,1 @@
+export const langItems = ['Каз', 'Рус', 'Eng']

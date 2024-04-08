@@ -1,4 +1,4 @@
-import { IProducts } from "../interfaces/IProducts";
+import { IProducts } from "../../interfaces/IProducts";
 
 export const products: IProducts = {
     headphones: {

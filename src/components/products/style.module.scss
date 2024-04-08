@@ -70,9 +70,12 @@
         display: flex;
         align-items: center;
     }
-
     &__buy {
         color: $colorBlackDefault;
+        &:hover {
+            transition: .3s;
+            color: $colorOrangePrice;
+        }
     }
 }
 

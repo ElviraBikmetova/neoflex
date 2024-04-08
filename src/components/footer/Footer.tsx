@@ -1,31 +1,26 @@
 import clsx from "clsx"
 import lang from '../../assets/images/lang.svg'
 import s from "./style.module.scss"
+import Logo from "../logo/Logo"
+import { navItems } from "../../data/navItems"
+import { langItems } from "../../data/langItems"
+import { socialItems } from "../../data/socialItems"
 
 const Footer = () => {
     return (
         <footer className={s.footer}>
-            <div className={'logo'}>QPICK</div>
+            <Logo />
             <nav className={s.footer__nav}>
                 <ul>
-                    <li>Избранное</li>
-                    <li>Корзина</li>
-                    <li>Контакты</li>
+                    {navItems.map(item => <li key={item}>{item}</li>)}
+                    <li className={s.footer__langChoiсe}>
+                        <img src={lang} alt="world" />
+                        {langItems.map(item => <div key={item}>{item}</div>)}
+                    </li>
                 </ul>
             </nav>
-            <div className={s.footer__lang}>
-                <div>Условия сервиса</div>
-                <div className={s.footer__langChoiсe}>
-                    <img src={lang} alt="world" />
-                    <div>Каз</div>
-                    <div>Рус</div>
-                    <div>Eng</div>
-                </div>
-            </div>
             <div className={s.footer__socials}>
-                <div className={clsx('icon-vkontakte', s.footer__icon)} />
-                <div className={clsx('icon-telegram', s.footer__icon)} />
-                <div className={clsx('icon-whatsapp', s.footer__icon)} />
+                {socialItems.map(item => <div key={item.iconName} className={clsx(item.iconName, s['footer__' + item.classNamePart])} />)}
             </div>
         </footer>
     )

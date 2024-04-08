@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { ERoutes } from "../../enums/routes"
 import { useAppSelector } from "../../hooks/redux"
 import { products } from "../../store/cartSlice"
+import Logo from "../logo/Logo"
 
 const Header = () => {
     const productsInCart = useAppSelector(products)
@@ -12,7 +13,7 @@ const Header = () => {
 
     return (
         <header className={s.header}>
-            <button className={'logo'} onClick={() => navigate(ERoutes.Root)}>QPICK</button>
+            <Logo />
             <div className={s.header__right}>
                 <div className={clsx('icon-like', s.header__iconLike)} />
                 <div>
