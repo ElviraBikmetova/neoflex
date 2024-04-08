@@ -7,6 +7,7 @@ import { products } from "../../store/cartSlice"
 
 const Header = () => {
     const productsInCart = useAppSelector(products)
+    const productsInCartCount = productsInCart.reduce((acc, curr) => acc + (curr.count || 0), 0)
     const navigate = useNavigate()
 
     return (
@@ -19,9 +20,7 @@ const Header = () => {
                     className={clsx('icon-cart', s.header__iconCart)}
                     onClick={() => navigate(ERoutes.Cart)}>
                         {productsInCart.length > 0 &&
-                        <div className={s.header__counter}>
-                            {productsInCart.reduce((acc, curr) => acc + (curr.count || 0), 0)}
-                        </div>}
+                        <div className={s.header__counter}>{productsInCartCount}</div>}
                     </button>
                 </div>
             </div>

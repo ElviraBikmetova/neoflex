@@ -23,6 +23,7 @@ const ProductCard: FC<ProductCardProps> = ({ product, destination }) => {
     const isInCart = productsInCart.some(item => item.id === product.id)
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
+    const totalPrice = formatPrice(product.price * (productsInCartCount || 0))
 
     const increment = () => {
         dispatch(incrementCounter(product.id))
@@ -90,7 +91,7 @@ const ProductCard: FC<ProductCardProps> = ({ product, destination }) => {
                     <div>{product.count}</div>
                     <button className={s.counter__plus} onClick={increment} />
                 </div>
-                <div>total price</div>
+                <div className={s[ECard.ForCart + '__totalPrice']}>{totalPrice}</div>
             </div>}
         </div>
     )
