@@ -10,8 +10,15 @@
         align-items: center;
         column-gap: 45px;
     }
+    &__iconLike, &__iconCart {
+        &:hover {
+            transition: color .3s;
+            color: $colorOrangePrice;
+            transform: scale(1.1);
+        }
+    }
     &__iconLike {
-        font-size: 20px;
+        font-size: 22px;
         color: $colorGrayDefault;
     }
     &__iconCart {

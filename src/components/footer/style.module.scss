@@ -30,6 +30,12 @@
             gap: 10px;
             justify-content: space-between;
             align-items: stretch;
+            li:not(:last-child) {
+                &:hover {
+                    transition: color .3s;
+                    color: $colorOrangePrice;
+                }
+            }
         }
     }
     &__langChoiсe {
@@ -39,9 +45,15 @@
         font-size: 15px;
         font-weight: 500;
         line-height: 18px;
-        & > div:nth-child(3) {
+        & > button:nth-child(3) {
             font-weight: 700;
-            color: $colorOrange;
+            color: $colorOrangePrice;
+        }
+        button {
+            &:hover {
+                transition: color .3s;
+                color: $colorOrangePrice;
+            }
         }
     }
     &__iconLang {
@@ -54,5 +66,10 @@
     }
     &__icon {
         font-size: 30px;
+        &:hover {
+            transition: color .3s;
+            color: $colorOrangePrice;
+            transform: scale(1.1);
+        }
     }
 }

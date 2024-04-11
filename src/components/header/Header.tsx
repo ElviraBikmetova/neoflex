@@ -15,7 +15,7 @@ const Header = () => {
         <header className={s.header}>
             <Logo />
             <div className={s.header__right}>
-                <div className={clsx('icon-like', s.header__iconLike)} />
+                <button className={clsx('icon-like', s.header__iconLike)} />
                 <div>
                     <button
                     className={clsx('icon-cart', s.header__iconCart)}

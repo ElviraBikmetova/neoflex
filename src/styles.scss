@@ -45,4 +45,13 @@ button {
     font-weight: 700;
     line-height: 30px;
     color: $colorBlackLogo;
+    &:hover {
+        transition: color .3s;
+        color: $colorOrangePrice;
+    }
+}
+
+.active {
+    font-weight: 500;
+    color: $colorOrangePrice;
 }

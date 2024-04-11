@@ -5,6 +5,7 @@ import Logo from "../logo/Logo"
 import { navItems } from "../../data/navItems"
 import { langItems } from "../../data/langItems"
 import { socialItems } from "../../data/socialItems"
+import { NavLink } from "react-router-dom"
 
 const Footer = () => {
     return (
@@ -12,15 +13,15 @@ const Footer = () => {
             <Logo />
             <nav className={s.footer__nav}>
                 <ul>
-                    {navItems.map(item => <li key={item}>{item}</li>)}
+                    {navItems.map(item => <li key={item.itemName}><NavLink to={item.path}>{item.itemName}</NavLink></li>)}
                     <li className={s.footer__langChoiсe}>
                         <img src={lang} alt="world" />
-                        {langItems.map(item => <div key={item}>{item}</div>)}
+                        {langItems.map(item => <button key={item}>{item}</button>)}
                     </li>
                 </ul>
             </nav>
             <div className={s.footer__socials}>
-                {socialItems.map(item => <div key={item.iconName} className={clsx(item.iconName, s['footer__' + item.classNamePart])} />)}
+                {socialItems.map(item => <a href={item.link} key={item.iconName} className={clsx(item.iconName, s.footer__icon)} />)}
             </div>
         </footer>
     )

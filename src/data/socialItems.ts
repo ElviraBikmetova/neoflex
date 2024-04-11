@@ -1,14 +1,14 @@
 export const socialItems = [
     {
         iconName: 'icon-vkontakte',
-        classNamePart: 'icon'
+        link: 'https://vk.com/77777777777'
     },
     {
         iconName: 'icon-telegram',
-        classNamePart: 'icon'
+        link: 'https://t.me/+77777777777'
     },
     {
         iconName: 'icon-whatsapp',
-        classNamePart: 'icon'
+        link: 'https://wa.me/77777777777'
     }
 ]
