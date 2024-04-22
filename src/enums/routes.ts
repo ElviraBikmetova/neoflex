@@ -1,5 +1,5 @@
 export enum ERoutes {
-    Root = "/",
+    Root = "/neoflex/",
     Cart = "cart",
     Empty = "javascript:void(0);"
 }
