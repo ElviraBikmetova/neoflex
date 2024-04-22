@@ -1,13 +1,11 @@
-import { v4 as uuidv4 } from 'uuid';
+import { useEffect } from 'react'
 import ProductCard from "../../components/products/ProductCard"
 import { ECard } from "../../enums/cards"
 import { useAppSelector } from "../../hooks/redux"
-import { cart, products } from "../../store/cartSlice"
-import { useEffect, useState } from 'react';
-import { IProductCard } from '../../interfaces/IProducts';
+import { products } from "../../store/cartSlice"
+import { IProductCard } from '../../interfaces/IProducts'
+import { formatPrice } from '../../helpers/formatPrice'
 import s from './style.module.scss'
-import { formatPrice } from '../../helpers/formatPrice';
-
 
 const CartPage = () => {
     const productsInCart = useAppSelector(products)

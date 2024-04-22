@@ -34,9 +34,8 @@
         font-weight: 500;
         line-height: 18px;
         background-color: $colorOrangePrice;
-        border-radius: 50%;
-        width: 17.4px;
-        height: 17.4px;
+        border-radius: 15px;
+        min-width: 17.4px;
         display: flex;
         justify-content: center;
         align-items: center;

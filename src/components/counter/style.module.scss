@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.counter  {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    &__minus, &__plus {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $colorOrange;
+        &:hover {
+            transition: .3s;
+            background-color: $colorOrangePrice;
+        }
+        &[disabled] {
+            background-color: $colorGrayBg;
+            cursor: not-allowed;
+        }
+        &::before {
+            content: '';
+            background-color: $colorWhiteDefault;
+            position: absolute;
+            width: 14px;
+            height: 2px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__plus  {
+        &::after {
+            content: '';
+            background-color: $colorWhiteDefault;
+            position: absolute;
+            width: 2px;
+            height: 14px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

@@ -1,11 +1,11 @@
+import { NavLink } from "react-router-dom"
 import clsx from "clsx"
 import lang from '../../assets/images/lang.svg'
-import s from "./style.module.scss"
-import Logo from "../logo/Logo"
 import { navItems } from "../../data/navItems"
 import { langItems } from "../../data/langItems"
 import { socialItems } from "../../data/socialItems"
-import { NavLink } from "react-router-dom"
+import Logo from "../logo/Logo"
+import s from "./style.module.scss"
 
 const Footer = () => {
     return (

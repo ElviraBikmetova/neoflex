@@ -16,10 +16,8 @@
     line-height: 21px;
     color: $colorBlackDefault;
     &__nav {
-        max-width: 447px;
+        max-width: 427px;
         width: 100%;
-        // max-height: 103px;
-        // height: 100%;
         ul {
             max-height: 103px;
             height: 100%;
@@ -30,10 +28,16 @@
             gap: 10px;
             justify-content: space-between;
             align-items: stretch;
-            li:not(:last-child) {
-                &:hover {
-                    transition: color .3s;
-                    color: $colorOrangePrice;
+            align-content: space-between;
+            li {
+                &:last-child {
+                    margin-top: 38px;
+                }
+                &:not(:last-child) {
+                    &:hover {
+                        transition: color .3s;
+                        color: $colorOrangePrice;
+                    }
                 }
             }
         }
@@ -70,6 +74,18 @@
             transition: color .3s;
             color: $colorOrangePrice;
             transform: scale(1.1);
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .footer {
+        justify-content: center;
+        &__nav {
+            ul {
+                align-content: center;
+                max-height: inherit;
+            }
         }
     }
 }

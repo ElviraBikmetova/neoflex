@@ -16,14 +16,12 @@ const Header = () => {
             <Logo />
             <div className={s.header__right}>
                 <button className={clsx('icon-like', s.header__iconLike)} />
-                <div>
-                    <button
-                    className={clsx('icon-cart', s.header__iconCart)}
-                    onClick={() => navigate(ERoutes.Cart)}>
-                        {productsInCart.length > 0 &&
-                        <div className={s.header__counter}>{productsInCartCount}</div>}
-                    </button>
-                </div>
+                <button
+                className={clsx('icon-cart', s.header__iconCart)}
+                onClick={() => navigate(ERoutes.Cart)}>
+                    {productsInCart.length > 0 &&
+                    <div className={s.header__counter}>{productsInCartCount}</div>}
+                </button>
             </div>
         </header>
     )
