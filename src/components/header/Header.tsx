@@ -1,10 +1,10 @@
 import clsx from "clsx"
-import s from "./style.module.scss"
 import { useNavigate } from "react-router-dom"
 import { ERoutes } from "../../enums/routes"
 import { useAppSelector } from "../../hooks/redux"
 import { products } from "../../store/cartSlice"
 import Logo from "../logo/Logo"
+import s from "./style.module.scss"
 
 const Header = () => {
     const productsInCart = useAppSelector(products)

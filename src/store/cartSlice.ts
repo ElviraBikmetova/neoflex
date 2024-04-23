@@ -29,6 +29,7 @@ const authSlice = createSlice({
         },
         decrementCounter(state, action: PayloadAction<string>) {
             const productToUpdate = state.products.find(product => product.id === action.payload)
+            
             if (productToUpdate) {
                 productToUpdate.count && productToUpdate.count--
             }

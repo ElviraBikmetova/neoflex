@@ -1,9 +1,8 @@
 import { FC } from "react"
-import { v4 as uuidv4 } from 'uuid';
 import { IProductsItem } from "../../interfaces/IProducts"
-import s from './style.module.scss'
+import { ECard } from "../../enums/cards"
 import ProductCard from "./ProductCard"
-import { ECard } from "../../enums/cards";
+import s from './style.module.scss'
 
 interface ProductsSectionProps {
     products: IProductsItem
